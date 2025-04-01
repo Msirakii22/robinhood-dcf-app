@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 
 # Load Excel data
-df = pd.read_excel("C:\\Users\\menou\\Downloads\\RobinHood 81 Possible Stock Price Outcome.xlsx", sheet_name="Sheet1")
+df = pd.read_excel("RobinHood 81 Possible Stock Price Outcome.xlsx", sheet_name="Sheet1")
+
 
 # Rename for clarity
 df.rename(columns={
