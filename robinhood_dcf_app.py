@@ -50,4 +50,44 @@ ax.set_xlabel("EBIT Margin Switch")
 ax.set_ylabel("Revenue Growth Switch")
 
 # Display in Streamlit
-st.pyplot(fig)
+st.pyplot(fig) 
+
+# Show Assumption Tables
+with st.expander("📋 View Scenario Assumptions"):
+    st.markdown("### 📈 Total Revenue Growth Rate")
+    st.dataframe({
+        "2025": ["28.04%", "55.17%", "19.83%"],
+        "2026": ["26.96%", "51.66%", "18.37%"],
+        "2027": ["24.11%", "46.30%", "17.33%"],
+        "2028": ["19.63%", "38.86%", "14.77%"],
+        "2029": ["16.66%", "20.62%", "8.61%"],
+    }, index=["Base Case", "Best Case", "Worst Case"])
+
+    st.markdown("### 🧮 EBIT Margin")
+    st.dataframe({
+        "2025": ["13.01%", "26.70%", "12.62%"],
+        "2026": ["26.70%", "40.18%", "12.65%"],
+        "2027": ["26.90%", "40.28%", "12.77%"],
+        "2028": ["27.05%", "40.28%", "12.86%"],
+        "2029": ["27.09%", "40.28%", "13.01%"],
+    }, index=["Base Case", "Best Case", "Worst Case"])
+
+    st.markdown("### 🏦 Cost of Capital (WACC)")
+    st.dataframe({
+        "2025": ["10.0%", "8.0%", "11.0%"],
+        "2026": ["10.0%", "8.0%", "11.0%"],
+        "2027": ["10.0%", "8.0%", "11.0%"],
+        "2028": ["10.0%", "8.0%", "11.0%"],
+        "2029": ["10.0%", "8.0%", "11.0%"],
+    }, index=["Base Case", "Best Case", "Worst Case"])
+
+    st.markdown("### 🌱 Terminal Growth Rate (TGR)")
+    st.dataframe({
+        "2025": ["2.0%", "3.0%", "1.0%"],
+        "2026": ["2.0%", "3.0%", "1.0%"],
+        "2027": ["2.0%", "3.0%", "1.0%"],
+        "2028": ["2.0%", "3.0%", "1.0%"],
+        "2029": ["2.0%", "3.0%", "1.0%"],
+    }, index=["Base Case", "Best Case", "Worst Case"])
+
+
